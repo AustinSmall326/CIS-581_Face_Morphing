@@ -16,11 +16,11 @@ fname = 'Output/Project2_trig_Austin_Brad.avi';
 
 % VideoWriter based video creation
 h_avi = VideoWriter(fname, 'Uncompressed AVI');
-h_avi.FrameRate = 3;
+h_avi.FrameRate = 10;
 h_avi.open();
     
 % Morph iteration
-for w=0:1:1
+for w=0:(1/59):1
     morphed_im = morph(img1, img2, im1_pts, im2_pts, w, w);
 
     % if image type is double, modify the following line accordingly if necessary
@@ -40,11 +40,11 @@ fname = 'Output/Project2_tps_Austin_Brad.avi';
 
 % VideoWriter based video creation
 h_avi = VideoWriter(fname, 'Uncompressed AVI');
-h_avi.FrameRate = 3;
+h_avi.FrameRate = 10;
 h_avi.open();
     
 % Morph iteration
-for w=0:1:1
+for w=0:(1/59):1
     morphed_im = morph_tps_wrapper(img1, img2, im1_pts, im2_pts, w, w);
 
     % if image type is double, modify the following line accordingly if necessary

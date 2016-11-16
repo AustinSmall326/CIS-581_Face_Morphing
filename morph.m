@@ -19,52 +19,6 @@ function morphed_im = morph(im1, im2, im1_pts, im2_pts, warp_frac, dissolve_frac
     % Triangulate average point correspondences.
     triangles = delaunay(imAVG_pts);
     
-    subplot(1,2, 1);
-    hold on;
-    for i = 1 : size(triangles, 1)
-        one   = triangles(i, 1);
-        two   = triangles(i, 2);
-        three = triangles(i, 3);
-        
-        plot([im1_pts(one, 1) im1_pts(two, 1) im1_pts(three, 1)], ...
-             [im1_pts(one, 2) im1_pts(two, 2) im1_pts(three, 2)], ...
-             'MarkerSize', 10);
-
-    end
-    set(gca,'Ydir','reverse')
-    axis off
-    title('First Image');
-    
-    
-    
-    
-    
-    
-   
-
-    
-    
-    % Draw triangles.
-    trianglePoints = [];
-    
-    subplot(1, 2, 2);
-    hold on;
-    for i = 1 : size(triangles, 1)
-        one   = triangles(i, 1);
-        two   = triangles(i, 2);
-        three = triangles(i, 3);
-        
-        plot([im2_pts(one, 1) im2_pts(two, 1) im2_pts(three, 1)], ...
-             [im2_pts(one, 2) im2_pts(two, 2) im2_pts(three, 2)], ...
-             'MarkerSize', 10);
-
-    end
-    set(gca,'Ydir','reverse')
-    axis off
-    title('Second Image');
-    
-    
-    
     % Compute intermediate shape.
     imINTERMEDIATE_pts = (1 - warp_frac) * im1_pts + warp_frac * im2_pts;
 
