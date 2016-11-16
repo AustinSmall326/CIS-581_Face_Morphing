@@ -20,20 +20,22 @@ Project Walk-Through and Results:
 
 - **Image Morph Via Triangulation**
 
-  The point correspondences across two images are averaged, giving an average face.  Delauney triangulation is then performed on these points, sectioning the plane into triangles.
+  - The point correspondences across two images are averaged, giving an average face.  Delauney triangulation is then performed on these points, sectioning the plane into triangles.
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/22136934/20359373/89a8e934-abfd-11e6-854d-070eb894a3cb.jpg" width="650">
 </p>
 
-  These triangles computed in the average face can be applied to the points in each of the original faces.
+  - These triangles computed in the average face can be applied to the points in each of the original faces.
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/22136934/20359569/801e8b70-abfe-11e6-8f33-914d75fb50c2.jpg" width="650">
+  <img src="![untitled](https://cloud.githubusercontent.com/assets/22136934/20359684/e7e03cc2-abfe-11e6-9256-0b2d3fb1daa6.jpg)" width="650">
 </p>
 
-  For each pixel in the new image, we determine where that point lies in the two original face images.  The new pixel is computed as a weighted 
-  average of the original pixels.  The key insight here is that points that lie within a triangle in the original face images remain within that trangle after a transformation into the 
+  - For each pixel in the new image, we determine where that point lies in the two original face images.  The new pixel is computed as a weighted 
+  average of the original pixels.  The key insight here is that points that lie within a triangle in the original face images remain within that trangle after a transformation into the new image.
+
+
 
 
 - Thin Plate Spline (TPS)
