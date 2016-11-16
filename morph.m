@@ -15,15 +15,32 @@
 function morphed_im = morph(im1, im2, im1_pts, im2_pts, warp_frac, dissolve_frac)
     % Compute average shape between im1_pts and im2_pts.
     imAVG_pts = (im1_pts + im2_pts) / 2;
-
-    subplot(1, 2, 1);
-    plot(imAVG_pts(:, 1), imAVG_pts(:, 2), 'b.', 'MarkerSize', 10)
-    hold on;
-    title('Average Face');
-    axis off;
-    set(gca,'Ydir','reverse')
+    
     % Triangulate average point correspondences.
     triangles = delaunay(imAVG_pts);
+    
+    subplot(1,2, 1);
+    hold on;
+    for i = 1 : size(triangles, 1)
+        one   = triangles(i, 1);
+        two   = triangles(i, 2);
+        three = triangles(i, 3);
+        
+        plot([im1_pts(one, 1) im1_pts(two, 1) im1_pts(three, 1)], ...
+             [im1_pts(one, 2) im1_pts(two, 2) im1_pts(three, 2)], ...
+             'MarkerSize', 10);
+
+    end
+    set(gca,'Ydir','reverse')
+    axis off
+    title('First Image');
+    
+    
+    
+    
+    
+    
+   
 
     
     
@@ -37,14 +54,14 @@ function morphed_im = morph(im1, im2, im1_pts, im2_pts, warp_frac, dissolve_frac
         two   = triangles(i, 2);
         three = triangles(i, 3);
         
-        plot([imAVG_pts(one, 1) imAVG_pts(two, 1) imAVG_pts(three, 1)], ...
-             [imAVG_pts(one, 2) imAVG_pts(two, 2) imAVG_pts(three, 2)], ...
+        plot([im2_pts(one, 1) im2_pts(two, 1) im2_pts(three, 1)], ...
+             [im2_pts(one, 2) im2_pts(two, 2) im2_pts(three, 2)], ...
              'MarkerSize', 10);
 
     end
     set(gca,'Ydir','reverse')
     axis off
-    title('Delauney Triangulation');
+    title('Second Image');
     
     
     
