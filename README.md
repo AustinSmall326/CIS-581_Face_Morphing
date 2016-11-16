@@ -33,7 +33,12 @@ Project Walk-Through and Results:
 </p>
 
   - For each pixel in the new image, we determine where that point lies in the two original face images.  The new pixel is computed as a weighted 
-  average of the original pixels.  The key insight here is that points that lie within a triangle in the original face images remain within that trangle after a transformation into the new image.
+  average of the original pixels.  The key insight here is that points that lie within a triangle in the original face images remain within that tiangle after a transformation into the new image.  The output from this step, which is also the final morphed image, can be viewed below.
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/22136934/20368113/97a61728-ac20-11e6-86c7-1e7a798cfaad.jpg" width="650">
+</p>
+
 
 
 
