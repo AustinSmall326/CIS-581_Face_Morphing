@@ -20,7 +20,7 @@ h_avi.FrameRate = 3;
 h_avi.open();
     
 % Morph iteration
-for w=0:(1/5):1
+for w=0:1:1
     morphed_im = morph(img1, img2, im1_pts, im2_pts, w, w);
 
     % if image type is double, modify the following line accordingly if necessary
@@ -44,7 +44,7 @@ h_avi.FrameRate = 3;
 h_avi.open();
     
 % Morph iteration
-for w=0:(1/5):1
+for w=0:1:1
     morphed_im = morph_tps_wrapper(img1, img2, im1_pts, im2_pts, w, w);
 
     % if image type is double, modify the following line accordingly if necessary

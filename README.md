@@ -12,14 +12,24 @@ Project Walk-Through and Results:
 
 - **Define Correspondences**
 
-  First, pairs of corresponding poins are selected by hand across the two input images.  This portion of my code leverages MATLAB's built-in "cpselect" tool.
+  First, pairs of corresponding points are selected by hand across the two input images.  This portion of my code leverages MATLAB's built-in "cpselect" tool.
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/9031637/20342033/c413059c-abb6-11e6-9ea7-4e75bf347f61.png" width="800">
 </p>
 
-- Image Morph Via Triangulation
+- **Image Morph Via Triangulation**
 
+  The point correspondences across two images are averaged, giving an average face.  Delauney triangulation is performed on these points, sectioning the plane into triangles.
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/22136934/20359373/89a8e934-abfd-11e6-854d-070eb894a3cb.jpg" width="800">
+</p>
+
+  These triangles computed in the average face can be applied to the points in each of the original faces.
+
+  For each pixel in the new image, we determine where that point lies in the two original face images.  The new pixel is computed as a weighted 
+  average of the original pixels.  The key insight here is that points that lie within a triangle in the original face images remain within that trangle after a transformation into the 
 
 
 - Thin Plate Spline (TPS)
