@@ -12,7 +12,7 @@ Project Walk-Through and Results:
 
 **Define Correspondences**
 
-  -First, pairs of corresponding points are selected by hand across the two input images.  This portion of my code leverages MATLAB's built-in "cpselect" tool.
+  - First, pairs of corresponding points are selected by hand across the two input images.  This portion of my code leverages MATLAB's built-in "cpselect" tool.
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/9031637/20342033/c413059c-abb6-11e6-9ea7-4e75bf347f61.png" width="800">
