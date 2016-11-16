@@ -15,7 +15,7 @@ Project Walk-Through and Results:
   First, pairs of corresponding poins are selected by hand across the two input images.  This portion of my code leverages MATLAB's built-in "cpselect" tool.
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/9031637/20342033/c413059c-abb6-11e6-9ea7-4e75bf347f61.png" width="1600">
+  <img src="https://cloud.githubusercontent.com/assets/9031637/20342033/c413059c-abb6-11e6-9ea7-4e75bf347f61.png" width="800">
 </p>
 
 - Image Morph Via Triangulation
