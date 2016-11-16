@@ -29,7 +29,7 @@ Project Walk-Through and Results:
   - These triangles computed in the average face can be applied to the points in each of the original faces.
 
 <p align="center">
-  <img src="![untitled](https://cloud.githubusercontent.com/assets/22136934/20359684/e7e03cc2-abfe-11e6-9256-0b2d3fb1daa6.jpg)" width="650">
+  <img src="![untitled](https://cloud.githubusercontent.com/assets/22136934/20367661/770dee70-ac1e-11e6-9368-c25225e5082c.jpg)" width="650">
 </p>
 
   - For each pixel in the new image, we determine where that point lies in the two original face images.  The new pixel is computed as a weighted 
