@@ -10,7 +10,7 @@ In this project, I implement two morphing methods (point triangulation and thin 
 Project Walk-Through and Results:
 --------------------
 
-- *Define Correspondences*
+- **Define Correspondences**
 
   First, pairs of corresponding poins are selected by hand across the two input images.  This portion of my code leverages MATLAB's built-in "cpselect" tool.
 
