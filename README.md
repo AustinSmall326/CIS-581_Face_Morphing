@@ -23,7 +23,7 @@ Project Walk-Through and Results:
   The point correspondences across two images are averaged, giving an average face.  Delauney triangulation is performed on these points, sectioning the plane into triangles.
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/22136934/20359373/89a8e934-abfd-11e6-854d-070eb894a3cb.jpg" width="800">
+  <img src="https://cloud.githubusercontent.com/assets/22136934/20359373/89a8e934-abfd-11e6-854d-070eb894a3cb.jpg" width="650">
 </p>
 
   These triangles computed in the average face can be applied to the points in each of the original faces.
