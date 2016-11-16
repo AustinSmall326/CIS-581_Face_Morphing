@@ -39,8 +39,10 @@ Project Walk-Through and Results:
   <img src="https://cloud.githubusercontent.com/assets/22136934/20368113/97a61728-ac20-11e6-86c7-1e7a798cfaad.jpg" width="650">
 </p>
 
-
-
-
-
 **Thin Plate Spline (TPS)**
+
+  - The thin plate spline technique computes an average face as before, by averaging the corresponding points between the input images.  For each input image, a function is then computed that exactly maps the selected points in the input image to their corresponding location in the averaged image.  This function also applies to all of the unselected pixels in the input image - note that there is no specified "exact" location for these points.  Instead, for these remaining points, the function acts to minimize bending contortions to the image.  You can see the morphing result from this technique below.
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/22136934/20368767/6f9b45b6-ac23-11e6-82b9-5c27dc67eadb.jp" width="650">
+</p>
